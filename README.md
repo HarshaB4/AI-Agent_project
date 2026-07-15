@@ -80,16 +80,19 @@ or
 
 python -m playwright install
 Workflow
-Step 1: User Input
-User enters:
+**Step 1: User Input**
 
+User enters:
 Name: Virat Kohli
 Context: Indian Cricketer
-Step 2: Search Agent
+**Step 2: Search Agent**
+
 File:
 
 agents/search_agent.py
-Responsibilities:
+
+
+**Responsibilities:**
 
 Search the web
 Collect URLs
@@ -97,7 +100,8 @@ Pass URLs for scraping
 Output:
 
 25 Documents Found
-Step 3: Scraper
+**Step 3: Scraper**
+
 File:
 
 services/scraper.py
@@ -113,7 +117,8 @@ Output:
     "url": "...",
     "content": "..."
 }
-Step 4: Store Documents in ChromaDB
+**Step 4: Store Documents in ChromaDB**
+
 File:
 
 rag/vector_store.py
@@ -122,7 +127,7 @@ Responsibilities:
 Convert documents to embeddings
 Store vectors
 Store metadata
-Step 5: Retrieve Relevant Context
+**Step 5: Retrieve Relevant Context**
 File:
 
 rag/retriever.py
@@ -133,7 +138,8 @@ Retrieve Top-K documents
 Output:
 
 Top 5 Relevant Documents
-Step 6: Extractor Agent
+
+**Step 6: Extractor Agent**
 File:
 
 agents/extractor_agent.py
@@ -155,11 +161,13 @@ Generated Fields:
   "recent_news": [],
   "references": []
 }
-Step 7: Validator Agent
+**Step 7: Validator Agent**
+
 File:
 
 agents/validator_agent.py
-Responsibilities:
+
+**Responsibilities:**
 
 Check missing fields
 Generate warnings
@@ -170,10 +178,12 @@ Example:
     "Net worth information unavailable"
   ]
 }
-Step 8: Download Image
+**Step 8: Download Image**
+
 File:
 
 services/image_service.py
+
 Responsibilities:
 
 Search person image
@@ -203,7 +213,6 @@ Output:
 
 output/profile.html
 Contains:
-
 Executive Summary
 Basic Details
 Biography
@@ -215,11 +224,13 @@ Recent News
 References
 Validation Warnings
 Profile Image
-Step 11: Generate PDF Report
+**Step 11: Generate PDF Report**
+
 File:
 
 services/pdf_service.py
-Responsibilities:
+**Responsibilities:**
+
 
 Convert HTML → PDF
 Output:
